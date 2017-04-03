@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QuestionView" customModule="LTLX" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="798"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khi ôtô bị hỏng tại vị trí giao nhau giữa đường bộ và đường sắt, người lái xe xử lý như thế nào?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8Y-KU-s9v" userLabel="Question Label">
+                    <rect key="frame" x="15" y="15" width="345" height="61"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G0u-fb-57a" userLabel="Image">
+                    <rect key="frame" x="15" y="91" width="345" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="n0J-Oc-Uz9"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJE-jY-jOF" userLabel="Answer Wrapper View">
+                    <rect key="frame" x="15" y="286" width="345" height="502"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="k8Y-KU-s9v" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="FP7-1s-PKc"/>
+                <constraint firstAttribute="trailing" secondItem="fJE-jY-jOF" secondAttribute="trailing" constant="15" id="Yav-AE-oNH"/>
+                <constraint firstAttribute="trailing" secondItem="k8Y-KU-s9v" secondAttribute="trailing" constant="15" id="Ycv-pK-GlE"/>
+                <constraint firstItem="k8Y-KU-s9v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="dov-PL-bp4"/>
+                <constraint firstAttribute="bottom" secondItem="fJE-jY-jOF" secondAttribute="bottom" constant="10" id="h6E-QJ-cRH"/>
+                <constraint firstItem="G0u-fb-57a" firstAttribute="top" secondItem="k8Y-KU-s9v" secondAttribute="bottom" constant="15" id="i6k-ys-EjZ"/>
+                <constraint firstAttribute="trailing" secondItem="G0u-fb-57a" secondAttribute="trailing" constant="15" id="jYG-05-IYu"/>
+                <constraint firstItem="fJE-jY-jOF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="wFx-RZ-F1G"/>
+                <constraint firstItem="G0u-fb-57a" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="wi5-Uy-oCI"/>
+                <constraint firstItem="fJE-jY-jOF" firstAttribute="top" secondItem="G0u-fb-57a" secondAttribute="bottom" constant="15" id="xs7-Ck-o7d"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="answersWrapperView" destination="fJE-jY-jOF" id="63f-Br-1Nd"/>
+                <outlet property="questionImageView" destination="G0u-fb-57a" id="ocg-fD-p8I"/>
+                <outlet property="questionLabel" destination="k8Y-KU-s9v" id="GRO-62-xBV"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="119"/>
+        </view>
+    </objects>
+</document>

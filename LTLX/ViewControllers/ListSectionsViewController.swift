@@ -24,9 +24,19 @@ class ListSectionsViewController: UIViewController {
   @IBOutlet weak var sectionsCollectionView: UICollectionView!
   fileprivate let reuseIdentifier = "SectionsCollectionCell"
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.navigationBar.isHidden = true
+    tabBarController?.tabBar.isHidden = false
+  }
+
 }
 
 extension ListSectionsViewController: UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let questionViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewControllerIdentity")
+    navigationController?.pushViewController(questionViewController, animated: true)
+  }
 
 }
 

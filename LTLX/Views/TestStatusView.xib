@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TestStatusView" customModule="LTLX" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Còn Lại:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8a5-mp-bju" userLabel="Remaining Time Label">
+                    <rect key="frame" x="5" y="17.5" width="62.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="450/450" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rc-1w-GGf" userLabel="Answered Question">
+                    <rect key="frame" x="147.5" y="17.5" width="80" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="FtW-tt-rjY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lka-ga-b15" userLabel="Wrong Answer Count">
+                    <rect key="frame" x="339" y="17.5" width="31" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6b8-Pr-OwG" userLabel="Remaining Time">
+                    <rect key="frame" x="72.5" y="17.5" width="43" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8a5-mp-bju" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3X3-w6-pl4"/>
+                <constraint firstItem="0rc-1w-GGf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GR5-tI-qqP"/>
+                <constraint firstItem="6b8-Pr-OwG" firstAttribute="leading" secondItem="8a5-mp-bju" secondAttribute="trailing" constant="5" id="NGg-dw-c32"/>
+                <constraint firstItem="0rc-1w-GGf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="RdT-7i-lkL"/>
+                <constraint firstAttribute="trailing" secondItem="lka-ga-b15" secondAttribute="trailing" constant="5" id="Rdr-FC-h4v"/>
+                <constraint firstItem="6b8-Pr-OwG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Rzg-I7-RK0"/>
+                <constraint firstItem="lka-ga-b15" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nI0-KL-NJI"/>
+                <constraint firstItem="8a5-mp-bju" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="yoo-BZ-akI"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="answeredQuestion" destination="0rc-1w-GGf" id="raz-SQ-nGH"/>
+                <outlet property="remainingTimeLabel" destination="6b8-Pr-OwG" id="jo0-NV-8se"/>
+                <outlet property="wrongAnswerCount" destination="lka-ga-b15" id="tzQ-RY-D5r"/>
+            </connections>
+            <point key="canvasLocation" x="7.5" y="163"/>
+        </view>
+    </objects>
+</document>
