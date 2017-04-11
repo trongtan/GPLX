@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hda-mF-I84" userLabel="Checkbox ImageView">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkbox-empty" translatesAutoresizingMaskIntoConstraints="NO" id="Hda-mF-I84" userLabel="Checkbox ImageView">
                     <rect key="frame" x="3" y="24.5" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="1fv-le-IwQ"/>
@@ -23,7 +23,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhanh chóng đưa ôtô ra khỏi đường sắt hoặc tìm cách báo hiệu để đoàn tàu dừng lại." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j35-el-eiI" userLabel="Answer Label">
-                    <rect key="frame" x="38" y="0.0" width="337" height="74"/>
+                    <rect key="frame" x="38" y="5" width="337" height="64"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -34,9 +34,9 @@
                 <constraint firstItem="Hda-mF-I84" firstAttribute="centerY" secondItem="j35-el-eiI" secondAttribute="centerY" id="CH8-og-daF"/>
                 <constraint firstAttribute="trailing" secondItem="j35-el-eiI" secondAttribute="trailing" id="Gbi-J5-JzI"/>
                 <constraint firstItem="Hda-mF-I84" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="3" id="Ivi-bF-DDQ"/>
-                <constraint firstAttribute="bottom" secondItem="j35-el-eiI" secondAttribute="bottom" id="NbY-SQ-hZt"/>
+                <constraint firstAttribute="bottom" secondItem="j35-el-eiI" secondAttribute="bottom" constant="5" id="NbY-SQ-hZt"/>
                 <constraint firstItem="j35-el-eiI" firstAttribute="leading" secondItem="Hda-mF-I84" secondAttribute="trailing" constant="10" id="PSU-tS-9CC"/>
-                <constraint firstItem="j35-el-eiI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sqz-YA-q2O"/>
+                <constraint firstItem="j35-el-eiI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="sqz-YA-q2O"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -47,4 +47,7 @@
             <point key="canvasLocation" x="-20" y="-178"/>
         </view>
     </objects>
+    <resources>
+        <image name="checkbox-empty" width="205" height="205"/>
+    </resources>
 </document>

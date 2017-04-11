@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="height" constant="40" id="gl3-zt-M2U"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raX-Vg-6JM" userLabel="Question View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raX-Vg-6JM" userLabel="Question View" customClass="QuestionView" customModule="LTLX" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="136" width="375" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -78,6 +78,7 @@
                         <outlet property="questionListView" destination="RRk-O4-Gaa" id="7xU-xh-DFQ"/>
                         <outlet property="questionWrapperView" destination="raX-Vg-6JM" id="TB8-ln-2kI"/>
                         <outlet property="testStatusView" destination="0Np-QP-PMw" id="r95-8S-LdT"/>
+                        <outlet property="testStatusWrapperViewHeightContraint" destination="bAQ-JK-itW" id="GS1-St-B8y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lep-hA-dlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -114,10 +115,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yi4-OI-Qtd" userLabel="Background">
-                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="100"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFH-dc-nRA" userLabel="Title">
-                                                    <rect key="frame" x="0.0" y="77" width="102" height="18"/>
+                                                    <rect key="frame" x="0.0" y="79" width="102" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

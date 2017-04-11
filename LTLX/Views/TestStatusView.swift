@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TestStatusView {
+class TestStatusView: UIView {
   @IBOutlet weak var remainingTimeLabel: UILabel!
   @IBOutlet weak var answeredQuestion: UILabel!
   @IBOutlet weak var wrongAnswerCount: UILabel!

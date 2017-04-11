@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ListSectionsViewController: UIViewController {
+class ListSectionsViewController: BaseViewController {
   let categories = ["Câu 1 - 45",
                     "Câu 46 - 90",
                     "Câu 91 - 135",
@@ -23,13 +23,6 @@ class ListSectionsViewController: UIViewController {
 
   @IBOutlet weak var sectionsCollectionView: UICollectionView!
   fileprivate let reuseIdentifier = "SectionsCollectionCell"
-
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    navigationController?.navigationBar.isHidden = true
-    tabBarController?.tabBar.isHidden = false
-  }
-
 }
 
 extension ListSectionsViewController: UICollectionViewDelegate {

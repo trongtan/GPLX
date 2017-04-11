@@ -21,15 +21,15 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G0u-fb-57a" userLabel="Image">
-                    <rect key="frame" x="15" y="91" width="345" height="180"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="284" translatesAutoresizingMaskIntoConstraints="NO" id="G0u-fb-57a" userLabel="Image">
+                    <rect key="frame" x="5" y="91" width="365" height="250"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="180" id="n0J-Oc-Uz9"/>
+                        <constraint firstAttribute="height" constant="250" id="n0J-Oc-Uz9"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJE-jY-jOF" userLabel="Answer Wrapper View">
-                    <rect key="frame" x="15" y="286" width="345" height="502"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="15" y="356" width="345" height="432"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,9 +40,9 @@
                 <constraint firstItem="k8Y-KU-s9v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="dov-PL-bp4"/>
                 <constraint firstAttribute="bottom" secondItem="fJE-jY-jOF" secondAttribute="bottom" constant="10" id="h6E-QJ-cRH"/>
                 <constraint firstItem="G0u-fb-57a" firstAttribute="top" secondItem="k8Y-KU-s9v" secondAttribute="bottom" constant="15" id="i6k-ys-EjZ"/>
-                <constraint firstAttribute="trailing" secondItem="G0u-fb-57a" secondAttribute="trailing" constant="15" id="jYG-05-IYu"/>
+                <constraint firstAttribute="trailing" secondItem="G0u-fb-57a" secondAttribute="trailing" constant="5" id="jYG-05-IYu"/>
                 <constraint firstItem="fJE-jY-jOF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="wFx-RZ-F1G"/>
-                <constraint firstItem="G0u-fb-57a" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="wi5-Uy-oCI"/>
+                <constraint firstItem="G0u-fb-57a" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="wi5-Uy-oCI"/>
                 <constraint firstItem="fJE-jY-jOF" firstAttribute="top" secondItem="G0u-fb-57a" secondAttribute="bottom" constant="15" id="xs7-Ck-o7d"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -55,4 +55,7 @@
             <point key="canvasLocation" x="34.5" y="119"/>
         </view>
     </objects>
+    <resources>
+        <image name="284" width="800" height="600"/>
+    </resources>
 </document>
