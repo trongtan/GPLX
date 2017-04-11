@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum LayoutConfig {
   static let padding: CGFloat = 5.0
