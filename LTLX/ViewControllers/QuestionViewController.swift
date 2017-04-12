@@ -20,8 +20,9 @@ class QuestionViewController: BaseViewController {
 
   @IBOutlet weak var testStatusWrapperViewHeightContraint: NSLayoutConstraint!
 
-  var contentOffset: Int {
-    return 40 + 32 + 64
+  //FIXME: Temporary hardcode here
+  var contentOffset: CGFloat {
+    return 400
   }
 
   var isScrollAble: Bool {
@@ -38,6 +39,7 @@ class QuestionViewController: BaseViewController {
     questionWrapperView.addSubview(questionView)
     testStatusView.addSubview(statusView)
     questionView.loadAnswers()
+    addGestureRecognizerToView(questionView)
   }
 
   override func viewWillLayoutSubviews() {
@@ -46,6 +48,24 @@ class QuestionViewController: BaseViewController {
     layoutActiveQuestionsView()
     layoutQuestionView()
     layoutScrollView()
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    scrollView.contentSize = CGSize(width: scrollView.contentSize.width, height: contentView.frame.height + contentOffset)
+  }
+
+  func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+    if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+      switch swipeGesture.direction {
+      case UISwipeGestureRecognizerDirection.right:
+        backToPreviousQuestion()
+      case UISwipeGestureRecognizerDirection.left:
+        nextToNextQuestion()
+      default:
+        break
+      }
+    }
   }
 }
 
@@ -70,5 +90,21 @@ extension QuestionViewController {
 
   fileprivate func layoutScrollView() {
     scrollView.isScrollEnabled = isScrollAble
+  }
+
+  fileprivate func addGestureRecognizerToView(_ view: UIView) {
+    let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+    swipeRight.direction = UISwipeGestureRecognizerDirection.right
+    view.addGestureRecognizer(swipeRight)
+
+    let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+    swipeRight.direction = UISwipeGestureRecognizerDirection.left
+    view.addGestureRecognizer(swipeLeft)
+  }
+
+  fileprivate func nextToNextQuestion() {
+  }
+
+  fileprivate func backToPreviousQuestion() {
   }
 }
